@@ -4,15 +4,36 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
     <script src="Index.js"></script>
     <title>Subtitles</title>
 </head>
 <body>
-    <button id="MyButton" type="button">Add a new text track</button><br>
- 
-    <video id="video1" width="700" height="500" controls="controls" muted>
-    <source src="Video/IMG_1136.mp4" type="video/mp4">
-    Your browser does not support HTML5 video.
-    </video>
+
+    <div class="row" class="mb-5">
+        <div class="col-md-4">
+            <input type="text" id="SubtitleText" placeholder="Insert a subtitle" style="width:100%">
+        </div>
+        <div class="col-md-2">
+            <input type="number" id="Start" placeholder="Insert a start time">
+        </div>
+        <div class="col-md-2">
+            <input type="number" id="End" placeholder="Insert a end time">
+        </div>
+        <div class="col-md-4">
+            <button type="button" id="AddSubtitle">Add</button>
+            <button type="button" id="AddSubtitleInmediate">Add inmediate</button>
+        </div>
+    </div>
+    <div class="row" class="mt-5">
+        <div class="col-md-12">
+            <video id="video1" width="700" height="500" controls="controls" muted>
+                <source src="Video/IMG_1136.mp4" type="video/mp4">
+                Your browser does not support HTML5 video.
+                </video>
+        </div>        
+    </div>
+
 </body>
 </html>
