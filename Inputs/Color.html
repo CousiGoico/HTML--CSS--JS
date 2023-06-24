@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form> 
+    <input type="datetime-local" id="ControlFecha" value="2022-11-23T12:35">
+    <input type="button" value="Pulsame" onclick="BotonPulsado()"> 
+    <script>
+        var control = document.getElementById("ControlFecha");
+        control.addEventListener("input", function(e) {
+            alert("Input: " + e.srcElement.valueAsDate.toString());
+        });
+        control.addEventListener("change", function(e) {
+            alert("Change: " + e.srcElement.valueAsDate.toString());
+        });
+        function BotonPulsado() {
+            var control = document.getElementById("ControlFecha");
+            control.step = 5;
+            control.stepUp();
+            alert("Número: " + control.value);
+        }
+    </script>
+    </form>
+</body>
+</html>
