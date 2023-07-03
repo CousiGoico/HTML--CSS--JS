@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- Esta etiqueta se usa comocontenedor de un contenido HTML que será reusado -->
+    <template id="MyTemplate">
+        <h1>Titulo</h1>
+        <h2>Subtitulo</h2>
+        <p>Contenido</p>
+    </template>
+
+    <button type="button" onclick="ShowTemplateContent()">Mostrar template</button>
+    
+    <script type="text/javascript">
+        function ShowTemplateContent() {
+            let template = document.getElementById("MyTemplate");
+            let content = template.content.cloneNode(true);
+            document.body.appendChild(content);
+        }
+    </script>
+</body>
+</html>
