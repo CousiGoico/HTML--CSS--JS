@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form>
+        <label for="input-a">Ingrese un número:</label>
+        <input type="number" id="input-a" name="a" oninput="calculate()">
+        <label for="input-b">Ingrese otro número:</label>
+        <input type="number" id="input-b" name="b" oninput="calculate()">
+        <br>
+        <output id="result" for="input-a"></output>
+        <script>
+          function calculate() {
+            var a = document.getElementById("input-a").value;
+            var b = document.getElementById("input-b").value;
+            var result = document.getElementById("result");
+            result.innerHTML = a * b;
+          }
+        </script>
+      </form>
+      
+</body>
+</html>
